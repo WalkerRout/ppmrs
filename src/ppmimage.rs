@@ -31,6 +31,10 @@ impl PPMImage {
   pub fn get_data_at_index(&self, i: usize, j: usize) -> u32 {
     self.data[i * (self.width as usize) + j]
   }
+
+  pub fn set_data_at_index(&mut self, i: usize, j: usize, colour: u32) {
+    self.data[i * (self.width as usize) + j] = colour;
+  }
   
   pub fn fill(&mut self, colour: u32) {
     self.data
